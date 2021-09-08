@@ -106,19 +106,20 @@ int main(){
 // Exemplo: imc = peso / pow(altura, 2);
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 int main(){
   int weight;
   float height, imc;
 
-  printf("Enter your weight ");
+  printf("Enter your weight: ");
   scanf("%d", &weight);
 
-  printf("Enter your height ");
+  printf("Enter your height: ");
 	scanf("%f", &height);
 
-  imc = weight / (height * height);
-  //imc = weight / pow(height, 2);
+  //imc = weight / (height * height);
+  imc = weight / pow(height, 2);
 
   if (imc < 18.5){
 		printf("Low Weight");
